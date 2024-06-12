@@ -1,11 +1,14 @@
 <template>
   <div>
-    <div class="card h-100" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
+    <div class="card" style="width: 18rem;">
+      <img src="" class="card-img-top" alt="">
       <div class="card-body">
         <h5 class="card-title">{{ project.title }}</h5>
-        <p class="card-text">{{ project.content }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <p class="card-text">{{ project.slug }}</p>
+        <div class="my-button d-flex justify-content-between gap-2">
+          <a href="#" class="btn btn-secondary">Modifica</a>
+          <a href="#" class="btn btn-danger">Elimina</a>
+        </div>
       </div>
     </div>
   </div>
@@ -20,9 +23,11 @@
       }
     },
     created(){
-      console.log('project')
+      console.log(this.project)
+    },
+    computed:{
+      
     }
-
   }
 </script>
 
