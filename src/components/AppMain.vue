@@ -1,21 +1,23 @@
 <template>
-  <div>
-    <h1>Progetti</h1>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div v-for="project in projects" class="col">
-        <!-- <h4>{{ project.title }}</h4>
-        <p>{{ project.slug }}</p> -->
-        <ProjectCard :project="project"/>
+  <main class="page-main">
+    <div class="container">
+      
+      <h1 class="text-center p-4">Progetti</h1>
+      
+      <div class="row">
+        <div v-for="project in projects" class="col">
+          <!-- <h4>{{ project.title }}</h4>
+          <p>{{ project.slug }}</p> -->
+          <ProjectCard :project="project"/>
+        </div>
       </div>
+      <ul class="d-flex list-unstyled justify-content-center gap-5 p-5">
+        <li class="border rounded-circle ps-2 pe-2 bg-secondary " @click="changePage(n)" v-for="n in lastPage" :key="n">
+          {{ n }}
+        </li>
+      </ul>
     </div>
-    <ul>
-      <li @click="changePage(n)" v-for="n in lastPage" :key="n">
-        {{ n }}
-      </li>
-    </ul>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -46,7 +48,7 @@
         axios.get('http://127.0.0.1:8000/api/project',{
           params: {
             page: this.currentPage,
-            perPage: 3
+            perPage: 6
           }
         })
         .then(res => {
@@ -61,6 +63,8 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+  @use '../style/partials/main.scss';
 
 </style>
