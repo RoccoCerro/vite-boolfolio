@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card" style="width: 18rem;">
+    <div class="card my-card">
       <img src="" class="card-img-top" alt="">
       <div class="card-body">
         <h5 class="card-title">{{ project.title }}</h5>
@@ -32,5 +32,5 @@
 </script>
 
 <style lang="scss" scoped>
-
+  @use '../style/partials/card.scss'
 </style>

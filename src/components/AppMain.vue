@@ -5,7 +5,7 @@
       <h1 class="text-center p-4">Progetti</h1>
       
       <div class="row">
-        <div v-for="project in projects" class="col">
+        <div v-for="project in projects" class="col-lg-4 col-md-6 col-sm-12 p-2">
           <!-- <h4>{{ project.title }}</h4>
           <p>{{ project.slug }}</p> -->
           <ProjectCard :project="project"/>
