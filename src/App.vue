@@ -1,6 +1,6 @@
 <template>
   <div>
-    ciao mondo
+    ciao mondo <font-awesome-icon :icon="['fas', 'user']" />
   </div>
   <AppMain />
 </template>
