@@ -2,6 +2,14 @@
   <div>
     <h1>Progetti</h1>
   </div>
+  <div class="container">
+    <div class="row">
+      <div v-for="project in projects" class="col">
+        <h4>{{ project.title }}</h4>
+        <p>{{ project.slug }}</p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -21,7 +29,7 @@
           }
         })
         .then(res => {
-          
+          this.projects = res.data.results.data
         })
       }
     },
