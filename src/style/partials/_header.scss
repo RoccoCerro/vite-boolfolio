@@ -1,6 +1,7 @@
 nav{
   margin-bottom: -90px;  
   z-index: 1;
+  transition: background-color 500ms;
 }
 
 .my-brand{
@@ -8,4 +9,8 @@ nav{
     width: 
       60px;
   }
+}
+
+.my-bg-header{
+  background-color: #455B94;
 }

@@ -1,11 +1,11 @@
 <template>
   <header>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" :class='isOpen === true ? "my-bg-header" : ""'>
       <div class="container-fluid">
         <a class="navbar-brand my-brand" href="http://127.0.0.1:8000/admin/projects">
           <img src="/img/logo2.png" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button @click="openClose" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -40,7 +40,17 @@
 
 <script>
   export default {
-    
+    data(){
+      return{
+        isOpen: false,
+      }
+    },
+    methods:{
+      openClose(){
+        this.isOpen = !this.isOpen
+        console.log(this.isOpen)
+      } 
+    }
   }
 </script>
 
