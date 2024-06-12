@@ -21,6 +21,6 @@
   }
 </script>
 
-<style>
-
+<style lang="scss">
+  @use './style/general.scss'
 </style>
