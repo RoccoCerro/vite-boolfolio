@@ -1,8 +1,9 @@
 <template>
   <main class="page-main">
+    
+    <AppHero />
+
     <div class="container">
-      
-      <h1 class="text-center p-4">Progetti</h1>
       
       <div class="row">
         <div v-for="project in projects" class="col-lg-4 col-md-6 col-sm-12 p-2">
@@ -12,7 +13,7 @@
         </div>
       </div>
       <ul class="d-flex list-unstyled justify-content-center gap-5 p-5">
-        <li class="border rounded-circle" @click="changePage(n)" v-for="n in lastPage" :key="n">
+        <li class="border rounded-circle" @click="changePage(n)" v-for="n in lastPage" :key="n" :class="currentPage == n ? 'bg-light': '' ">
           {{ n }}
         </li>
       </ul>
@@ -23,10 +24,12 @@
 <script>
   import axios from "axios";
   import ProjectCard from './ProjectCard.vue'; 
+  import AppHero from './AppHero.vue'; 
 
   export default {
     components:{
-      ProjectCard
+      ProjectCard,
+      AppHero,
     },
     data() {
       return {

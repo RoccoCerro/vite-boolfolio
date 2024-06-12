@@ -1,0 +1,25 @@
+
+
+.my-hero{
+  height: 700px;
+  margin-bottom: -50px;
+  position: relative;
+//   background-image: url(/public/img/hero3.jpeg);
+//   background-size: cover;
+  h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150px;
+    color: white;
+    font-size: 80px;
+
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  img{
+    height: 100%;
+  }
+}
