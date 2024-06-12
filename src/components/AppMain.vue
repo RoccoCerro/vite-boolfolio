@@ -5,8 +5,9 @@
   <div class="container">
     <div class="row">
       <div v-for="project in projects" class="col">
-        <h4>{{ project.title }}</h4>
-        <p>{{ project.slug }}</p>
+        <!-- <h4>{{ project.title }}</h4>
+        <p>{{ project.slug }}</p> -->
+        <ProjectCard :project="project"/>
       </div>
     </div>
     <ul>
@@ -19,8 +20,12 @@
 
 <script>
   import axios from "axios";
+  import ProjectCard from './ProjectCard.vue'; 
 
   export default {
+    components:{
+      ProjectCard
+    },
     data() {
       return {
         projects: [],
