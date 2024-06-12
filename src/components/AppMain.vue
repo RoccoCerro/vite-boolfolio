@@ -12,7 +12,7 @@
         </div>
       </div>
       <ul class="d-flex list-unstyled justify-content-center gap-5 p-5">
-        <li class="border rounded-circle ps-2 pe-2 bg-secondary " @click="changePage(n)" v-for="n in lastPage" :key="n">
+        <li class="border rounded-circle" @click="changePage(n)" v-for="n in lastPage" :key="n">
           {{ n }}
         </li>
       </ul>
