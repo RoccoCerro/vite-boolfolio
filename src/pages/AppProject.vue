@@ -27,7 +27,7 @@
         console.log(this.$route.params.slug);
         axios.get('http://127.0.0.1:8000/api/project/' + this.$route.params.slug )
         .then(res => {
-            this.project = res.data.results
+            this.project = res.data.result
         })
       }
     },

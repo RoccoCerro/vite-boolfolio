@@ -48,7 +48,7 @@
         this.fetchProjects()
       },
       fetchProjects(){
-        axios.get('http://127.0.0.1:8000/api/project',{
+        axios.get('http://127.0.0.1:8000/api/projects',{
           params: {
             page: this.currentPage,
             perPage: 6
