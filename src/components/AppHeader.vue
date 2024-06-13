@@ -26,7 +26,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item text-subtitle" href="http://127.0.0.1:8000/admin/technologies">Tecnologie</a></li>
-                <li><a class="dropdown-item text-subtitle" href="#">Tipi</a></li>
+                <li><RouterLink class="dropdown-item text-subtitle" :to="{ name: 'contact' }">Contatti</RouterLink></li>
               </ul>
             </li>
           </ul>
