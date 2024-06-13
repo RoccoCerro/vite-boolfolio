@@ -16,7 +16,8 @@
               <RouterLink class="nav-link" :to="{ name: 'home' }">Casa</RouterLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/admin/projects">Progetti</a>
+              <!-- <a class="nav-link" href="http://127.0.0.1:8000/admin/projects">Progetti</a> -->
+              <RouterLink class="nav-link" :to="{ name: 'portfolio' }">Progetti</RouterLink>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

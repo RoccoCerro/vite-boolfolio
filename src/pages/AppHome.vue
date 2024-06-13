@@ -1,5 +1,5 @@
 <template>
-  <section class="my-main">
+  <section class="my-home">
     <div class="container">
       <h1 class="text-center">Questa è la home</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus totam est in aliquam, reiciendis animi quas esse ratione porro quasi aperiam voluptates earum dolore autem ipsa sequi iusto accusantium!</p>
