@@ -1,7 +1,7 @@
 <template>
   <section class="my-hero">
     <h1> - Progetti - </h1>
-    <img src="/public/img/hero3.jpeg" alt="">
+    <img src="/img/hero3.jpeg" alt="">
   </section>
 </template>
 
