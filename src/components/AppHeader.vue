@@ -12,13 +12,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="http://127.0.0.1:8000/">Casa</a>
+              <!-- <a class="nav-link active text-white" aria-current="page" href="http://127.0.0.1:8000/">Casa</a> -->
+              <RouterLink class="nav-link" :to="{ name: 'home' }">Casa</RouterLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="http://127.0.0.1:8000/admin/projects">Progetti</a>
+              <a class="nav-link" href="http://127.0.0.1:8000/admin/projects">Progetti</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Gestisci
               </a>
@@ -30,7 +31,7 @@
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
-            <button class="btn btn-outline-light " type="submit">Cerca</button>
+            <button class="btn btn-outline-dark " type="submit">Cerca</button>
           </form>
         </div>
       </div>

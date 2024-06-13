@@ -3,7 +3,11 @@
     <!-- ciao mondo <font-awesome-icon :icon="['fas', 'user']" /> -->
   </div>
   <AppHeader />
-  <AppMain />
+  <!-- <AppHeader /> -->
+  <!-- <AppMain /> -->
+  <div>
+    <RouterView />
+  </div>
 </template>
 
 <script>
