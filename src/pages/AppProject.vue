@@ -5,6 +5,9 @@
         <h1>Dettaglio Progetto</h1>
         <p>{{ $route.params.slug }}</p>
         <p>{{ project.title }}</p>
+        <p>{{ project }}</p>
+        <p>{{ project.technologies[0].name }}</p>
+        <p>{{ project.type.name }}</p>
         <button @click="goBack" class="btn btn-outline-dark">
           Indietro
         </button>
@@ -27,9 +30,9 @@
         this.$router.back()
       },
       fetchProject(){
-        axios.get('http://127.0.0.1:8000/api/projects/' + this.$route.params.slug )
+        axios.get( 'http://127.0.0.1:8000/api/projects/' + this.$route.params.slug )
         .then(res => {
-            this.project = res.data.result
+            this.project = res.data.project
         })
       }
     },
