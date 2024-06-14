@@ -42,6 +42,12 @@
         .then(res => {
             this.project = res.data.project
         })
+        .catch((err)=>{
+          this.$router.push({
+            name: 'not-found',
+            params: { pathMatch: this.$route.path.substring(1).split('/') },
+          })
+        })
       }
     },
     created(){
