@@ -6,8 +6,9 @@
         <p>{{ $route.params.slug }}</p>
         <p>{{ project.title }}</p>
         <p>{{ project }}</p>
-        <p>{{ project.technologies[0].name }}</p>
-        <p>{{ project.type.name }}</p>
+        <p>{{ project.technologies ? project.technologies[0].name : 'Nessuna tecnologia' }}</p>
+        <p>{{ project.type ? project.type.name : 'Nessun tipo' }}</p>
+        <p>{{ slug }}</p>
         <button @click="goBack" class="btn btn-outline-dark">
           Indietro
         </button>
@@ -18,8 +19,15 @@
 
 <script>
   import axios from 'axios'
+  // import { stringifyQuery } from 'vue-router';
 
   export default {
+    props:{
+      slug: {
+        type: String,
+        required: true,
+      }
+    },
     data(){
       return{
         project: null
@@ -30,7 +38,7 @@
         this.$router.back()
       },
       fetchProject(){
-        axios.get( 'http://127.0.0.1:8000/api/projects/' + this.$route.params.slug )
+        axios.get( 'http://127.0.0.1:8000/api/projects/' + this.slug)
         .then(res => {
             this.project = res.data.project
         })
