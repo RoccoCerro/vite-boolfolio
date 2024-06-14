@@ -25,7 +25,6 @@
       }
     },
     created(){
-      console.log(this.project)
     },
     computed:{
       

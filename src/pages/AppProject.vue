@@ -1,22 +1,25 @@
 <template>
   <section class="project">
-    <div class="container">
-      <h1>Dettaglio Progetto</h1>
-      <p>{{ $route.params.slug }}</p>
-      <p>{{ console.log(project) }}</p>
-      <button @click="goBack" class="btn btn-outline-dark">
-        Indietro
-      </button>
-    </div>
+    <template v-if="project">
+      <div class="container">
+        <h1>Dettaglio Progetto</h1>
+        <p>{{ $route.params.slug }}</p>
+        <p>{{ project.title }}</p>
+        <button @click="goBack" class="btn btn-outline-dark">
+          Indietro
+        </button>
+      </div>
+    </template>
   </section>
 </template>
 
 <script>
   import axios from 'axios'
+
   export default {
     data(){
       return{
-        project: []
+        project: null
       }
     },
     methods:{
@@ -24,8 +27,7 @@
         this.$router.back()
       },
       fetchProject(){
-        console.log(this.$route.params.slug);
-        axios.get('http://127.0.0.1:8000/api/project/' + this.$route.params.slug )
+        axios.get('http://127.0.0.1:8000/api/projects/' + this.$route.params.slug )
         .then(res => {
             this.project = res.data.result
         })
